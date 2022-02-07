@@ -1,20 +1,15 @@
 n=int(input())
-n1=n
-i=0
-j=0
-h=[]
-a=[]
-sum1=0
-while(n>0):
-    h1,a1=[int(x) for x in input().split()]
-    h.append(h1)
-    a.append(a1)
-    n=n-1
-
-while(i<n1):
-    while(j<n1):
-        if i!=j and (h[i]==a[j] or h[j]==a[i]):
-            sum1=sum1+1
-        j=j+1
-    i=i+1
-print(sum1)
+w=0
+list1=[]
+list2=[]
+for i in range(n):
+    a,b=map(lambda x:int(x),input().split())
+    list1.append(a)
+    list2.append(b)
+for i in list1:
+    k=0
+    while k<len(list2):
+        if i == list2[k]:
+            w+=1
+        k+=1
+print(w)
